@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}{{ titulo }}{% endblock %}
+{% block content %}
+<h1 class="h3 mb-3">{{ titulo }}</h1>
+<div class="card"><div class="card-body">
+  <form method="post" novalidate>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="nombre_mecanico" class="form-label">Nombre del mecánico *</label>
+        <input type="text" class="form-control" id="nombre_mecanico" name="nombre_mecanico"
+               maxlength="100" required value="{{ item.nombre_mecanico or '' }}">
+      </div>
+      <div class="col-md-3">
+        <label for="especialidad" class="form-label">Especialidad *</label>
+        <select class="form-select" id="especialidad" name="especialidad" required>
+          <option value="">Seleccione…</option>
+          {% for e in especialidades %}
+            <option value="{{ e }}" {{ 'selected' if item.especialidad == e }}>{{ e }}</option>
+          {% endfor %}
+          {% if item.especialidad and item.especialidad not in especialidades %}
+            <option value="{{ item.especialidad }}" selected>{{ item.especialidad }}</option>
+          {% endif %}
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="meta_mensual" class="form-label">Meta mensual (COP) *</label>
+        <input type="number" class="form-control" id="meta_mensual" name="meta_mensual"
+               min="0" step="0.01" required
+               value="{{ item.meta_mensual if item.meta_mensual is not none }}">
+      </div>
+    </div>
+    {{ m.botones_form(url_for('mecanicos.listar')) }}
+  </form>
+</div></div>
+{% endblock %}
