@@ -27,9 +27,9 @@ Tecnologías: Python 3.10+, Flask 3, psycopg2, PostgreSQL, Bootstrap 5 (desde CD
 | mecanicos | Mecánicos con especialidad y meta mensual | 1 mecánico → N órdenes |
 | ordenes | Órdenes de servicio | FK a clientes, repuestos y mecanicos |
 
-- Justificación de la 3FN: [docs/modelo_3FN.md](docs/modelo_3FN.md)
-- Diccionario de datos: [docs/diccionario_de_datos.md](docs/diccionario_de_datos.md)
-- Plan de pruebas (3 casos por tabla, 15 en total, con capturas): [docs/plan_de_pruebas.md](docs/plan_de_pruebas.md)
+- Modelo entidad-relación y justificación de la 3FN: [PDF](docs/modelo_3FN.pdf) · [Word](docs/modelo_3FN.docx)
+- Diccionario de datos: [PDF](docs/diccionario_de_datos.pdf) · [Word](docs/diccionario_de_datos.docx)
+- Plan de pruebas, 3 casos por tabla (15 en total) con sus capturas: [PDF](docs/plan_de_pruebas.pdf) · [Word](docs/plan_de_pruebas.docx)
 
 ## Estructura
 
