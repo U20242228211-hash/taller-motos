@@ -13,7 +13,7 @@ tabla, `db.py`, validaciones, macros y pruebas), con las tablas, los campos y lo
 
 Tecnologías: Python 3.10+, Flask 3, psycopg2, PostgreSQL, Bootstrap 5 (desde CDN), pytest.
 
-![Panel de inicio](docs/capturas/01-inicio.png)
+![Panel de inicio](docs/capturas/CP-16-panel-inicio.png)
 
 ## Modelo de datos
 
@@ -29,7 +29,7 @@ Tecnologías: Python 3.10+, Flask 3, psycopg2, PostgreSQL, Bootstrap 5 (desde CD
 
 - Justificación de la 3FN: [docs/modelo_3FN.md](docs/modelo_3FN.md)
 - Diccionario de datos: [docs/diccionario_de_datos.md](docs/diccionario_de_datos.md)
-- Plan de pruebas (15 casos con capturas): [docs/plan_de_pruebas.md](docs/plan_de_pruebas.md)
+- Plan de pruebas (3 casos por tabla, 15 en total, con capturas): [docs/plan_de_pruebas.md](docs/plan_de_pruebas.md)
 
 ## Estructura
 
@@ -116,4 +116,4 @@ Son 32 pruebas sobre la base real. Cada una crea sus registros (con prefijo `ZZ_
 
 | Listado de órdenes (3 llaves foráneas) | Mensaje al borrar un cliente con órdenes |
 |---|---|
-| ![Órdenes](docs/capturas/12-crear-orden.png) | ![Llave foránea](docs/capturas/10-eliminar-cliente-con-ordenes.png) |
+| ![Órdenes](docs/capturas/CP-13-orden-crear.png) | ![Llave foránea](docs/capturas/CP-09-cliente-eliminar-relacionado.png) |

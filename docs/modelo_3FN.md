@@ -36,6 +36,16 @@ puede haber dependencias parciales: cada columna depende de toda la llave.
   día**. Si mañana sube el precio de lista, las órdenes viejas no deben cambiar. Por eso no es una dependencia del
   repuesto sino un dato de la orden.
 
+## Tabla por tabla
+
+| Tabla | 1FN | 2FN | 3FN |
+|---|---|---|---|
+| categorias | Cada fila es una categoría, con valores simples | Llave de una columna (`id_categoria`) | `descripcion` depende solo de la categoría |
+| repuestos | Un repuesto por fila; su categoría es un solo valor | Llave de una columna (`id_repuesto`) | Guarda `id_categoria`, no el nombre de la categoría |
+| clientes | Un cliente por fila; un solo correo y un solo segmento | Llave de una columna (`id_cliente`) | Ciudad, segmento y correo dependen solo del cliente |
+| mecanicos | Un mecánico por fila; una especialidad | Llave de una columna (`id_mecanico`) | Especialidad y meta dependen solo del mecánico |
+| ordenes | Un repuesto por orden; cada valor es simple | Llave de una columna (`id_orden`) | Solo llaves foráneas: los nombres están en sus tablas y el total no se guarda |
+
 ## Restricciones de integridad
 
 - `NOT NULL` en los campos obligatorios.
